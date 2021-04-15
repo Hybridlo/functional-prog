@@ -1,0 +1,87 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           lab2
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/Nirfiolo/functional_programming_lab_2#readme>
+homepage:       https://github.com/Nirfiolo/functional_programming_lab_2#readme
+bug-reports:    https://github.com/Nirfiolo/functional_programming_lab_2/issues
+author:         Nirfiolo
+maintainer:     example@example.com
+copyright:      2021 Nirfiolo
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/Nirfiolo/functional_programming_lab_2
+
+library
+  exposed-modules:
+      Huffman
+  other-modules:
+      Paths_lab2
+  hs-source-dirs:
+      src
+  build-depends:
+      HUnit
+    , base ==4.12.*
+    , binary
+    , binary-strict
+    , bytestring
+    , containers
+    , tasty
+    , tasty-hunit
+    , tasty-quickcheck
+    , tasty-smallcheck
+    , time
+  default-language: Haskell2010
+
+executable lab2-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_lab2
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit
+    , base ==4.12.*
+    , binary
+    , binary-strict
+    , bytestring
+    , containers
+    , lab2
+    , tasty
+    , tasty-hunit
+    , tasty-quickcheck
+    , tasty-smallcheck
+    , time
+  default-language: Haskell2010
+
+test-suite lab2-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_lab2
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit
+    , base ==4.12.*
+    , binary
+    , binary-strict
+    , bytestring
+    , containers
+    , lab2
+    , tasty
+    , tasty-hunit
+    , tasty-quickcheck
+    , tasty-smallcheck
+    , time
+  default-language: Haskell2010
